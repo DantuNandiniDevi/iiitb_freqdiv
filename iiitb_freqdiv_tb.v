@@ -1,12 +1,12 @@
 `timescale 1ns/1ps
-module fdtb;
+module iiitb_freqdiv_tb;
 
 reg clk;
 reg en;
 reg [3:0]n;
 wire clkout;
 
-fd f1(en,clk,n,clkout);
+iiitb_freqdiv f1(en,clk,n,clkout);
 
 initial
 begin
