@@ -1,2 +1,2 @@
-# iiitb_freqdiv - IIITB Frequency Divider
+# iiitb_freqdiv - iiitb frequency divider
 This is a frequency divider model
