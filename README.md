@@ -12,3 +12,5 @@ This is a frequency divider model
  $ ./iiitb_freqdiv_out.out
  $ gtkwave iiitb_freqdiv_vcd.vcd
 ```
+
+**Simulation Waveforms:** 
