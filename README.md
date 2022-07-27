@@ -13,4 +13,6 @@ This is a frequency divider model which provide frequency division upto 16 of th
  $ gtkwave iiitb_freqdiv_vcd.vcd
 ```
 
-**Simulation Waveforms:** 
+**Simulation Waveform:**
+
+![simulation1](/home/user/asic_prepsem/frequency_divider/simulated_waveform.jpg)
