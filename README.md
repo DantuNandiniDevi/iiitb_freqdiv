@@ -15,4 +15,4 @@ This is a frequency divider model which provide frequency division upto 16 of th
 
 **Simulation Waveform:**
 
-![simulation1](/home/user/asic_prepsem/frequency_divider/simulated_waveform.jpg)
+![simulated_waveform](https://user-images.githubusercontent.com/62461290/181249785-ff6d7efb-2070-46cd-8c22-c73c88f9d1a8.png)
