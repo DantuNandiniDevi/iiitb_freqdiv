@@ -12,8 +12,8 @@ initial
 begin
 clk=0;
 en=1;
-$dumpfile ("fdvcd.vcd"); 
-$dumpvars(0,fdtb);
+$dumpfile ("iiitb_freqdiv_vcd.vcd"); 
+$dumpvars(0,iiitb_freqdiv_tb);
 
 
 forever
@@ -26,7 +26,9 @@ initial
 begin
 n=3;
 #300 n=4; 
-#300 $finish;
+#300 n=11;
+#600 n=6;
+#600 $finish;
 
 end 
 endmodule
