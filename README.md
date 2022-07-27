@@ -1,7 +1,7 @@
 # iiitb_freqdiv - Frequency Divider
 This is a frequency divider model
 
-** To clone the repository, download the netlist files and simulate the results, Enter the following commands in your terminal: ** <br />
+__ To clone the repository, download the netlist files and simulate the results, Enter the following commands in your terminal: __ <br />*
 ...
 *$ git clone https://github.com/DantuNandiniDevi/iiitb_freqdiv <br />
  $ cd iiitb_freqdiv <br />
