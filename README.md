@@ -1,5 +1,5 @@
 # iiitb_freqdiv - Frequency Divider
-This is a frequency divider model
+This is a frequency divider model which provide frequency division upto 16 of the input clock.
 
 </br>
 
