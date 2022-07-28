@@ -6,7 +6,7 @@ read_verilog /home/nandini.dantu/Desktop/iiitb_freqdiv/verilog/iiitb_freqdiv.v
 synth -top iiitb_freqdiv
 
 # mapping to mycells.lib
-dfflibmap -liberty ‌‌‌‌‌‌/home/nandini.dantu/Desktop/iiitb_freqdiv/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+dfflibmap -liberty /home/nandini.dantu/Desktop/iiitb_freqdiv/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 abc -liberty /home/nandini.dantu/Desktop/iiitb_freqdiv/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 clean
 flatten
