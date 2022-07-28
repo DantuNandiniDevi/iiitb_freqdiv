@@ -31,6 +31,7 @@ This is a frequency divider model which provide frequency division upto 16 of th
 
 # Contact Information
 - Dantu Nandini Devi, MS by Research Student, IIITB, nandini.dantu@gmail.com </br>
+- Vasanthi D R, PhD Student, IIITB, vasanthi.dr@iiitb.ac.in </br>
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com </br>
 - Nanditha Rao, nanditha.rao@iiitb.ac.in </br>
 - Madhav Rao, mr@iiitb.ac.in </br>
