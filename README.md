@@ -24,8 +24,8 @@ Fig 1: Frequency Divider
 Fig 2: Basic I/O diagram
 </p>
 
-
-# Icarus Verilog (iverilog) installation on ubuntu
+# Tools Used
+## Icarus Verilog (iverilog) installation on ubuntu
 
 Open the terminal by right clicking on an empty space and type the following commands:
 
@@ -39,8 +39,29 @@ $ sudo apt-get install iverilog gtkwave
 
 This can be installed on windows as well by directly downloading and installing the .exe file of icarus
 
+## Yosys installation on ubuntu
 
-# PreSimulation
+Open the terminal by right clicking on am empty space in the directory u want to install and type the following commands:
+
+```
+$ git clone https://github.com/YosysHQ/yosys.git
+
+$ cd yosys-master
+
+$ make
+
+$ sudo apt install make (If make is not installed please install it)
+
+$ sudo apt-get install build-essential clang bison flex \
+    libreadline-dev gawk tcl-dev libffi-dev git \
+    graphviz xdot pkg-config python3 libboost-system-dev \
+    libboost-python-dev libboost-filesystem-dev zlib1g-dev
+
+$ make
+
+$ sudo make install
+```
+# PreSynthesis
 
 To clone the repository, download the netlist files and simulate the results, Enter the following commands in your terminal:
 
@@ -56,7 +77,55 @@ To clone the repository, download the netlist files and simulate the results, En
  $ gtkwave iiitb_freqdiv_vcd.vcd
 ```
 
-![presimulated_waveform](https://user-images.githubusercontent.com/62461290/181249785-ff6d7efb-2070-46cd-8c22-c73c88f9d1a8.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/184837511-a29ecb45-d974-4053-8a1b-7f27b42759d0.png"> <br>
+</p>
+
+# PostSynthesis
+
+```
+$ yosys
+
+yosys> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+yosys> read_verilog iiitb_freqdiv.v
+
+yosys> synth -top iiitb_freqdiv
+
+yosys> dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+yosys> stat
+
+yosys> show
+
+yosys> write_verilog iiitb_freqdiv_netlist.v
+
+$ iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 ../verilog_model/primitives.v ../verilog_model/sky130_fd_sc_hd.v iiitb_freqdiv_netlist.v iiitb_freqdiv_tb.v
+
+$ ./a.out
+
+$ gtkwave iiitb_freqdiv_vcd.vcd
+```
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/184857873-012cef05-acf8-4170-b8e4-0f09a664c9ed.png"> <br>
+</p>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/184857905-2e755fa3-74ad-4a46-8683-94a24dfcb488.png"> <br>
+</p>
+
+# Reference
+
+- tp://pgandhi189.blogspot.com/2014/11/universal-frequency-dividor.html
+
+[2] https://en.wikipedia.org/wiki/Frequency divider 
+
+- https://eng.libretexts.org/Bookshelves/Electrical Engineering/Electronics/Microwave and RF Design IV%3A Modules (Steer)/06%3A Mixer and Source Modules/6.08%3A Frequency Divider,some content and fig.1. was taken from here..
+
+# Author
+- Dantu Nandini Devi
 
 # Contributors
 - Dantu Nandini Devi </br>
