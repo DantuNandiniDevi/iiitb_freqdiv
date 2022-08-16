@@ -122,7 +122,7 @@ $ gtkwave iiitb_freqdiv_vcd.vcd
 
 - https://en.wikipedia.org/wiki/Frequencydivider 
 
-- https://eng.libretexts.org/Bookshelves/Electrical Engineering/Electronics/Microwave and RF Design IV%3A Modules (Steer)/06%3A Mixer and Source Modules/6.08%3A Frequency Divider,some content and fig.1. was taken from here..
+- https://eng.libretexts.org/Bookshelves/ElectricalEngineering/Electronics/Microwave and RF Design IV%3A Modules (Steer)/06%3A Mixer and Source Modules/6.08%3A Frequency Divider,some content and fig.1. was taken from here..
 
 # Author
 - Dantu Nandini Devi
