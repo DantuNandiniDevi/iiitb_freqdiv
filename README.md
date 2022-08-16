@@ -118,9 +118,9 @@ $ gtkwave iiitb_freqdiv_vcd.vcd
 
 # Reference
 
-- tp://pgandhi189.blogspot.com/2014/11/universal-frequency-dividor.html
+- http://pgandhi189.blogspot.com/2014/11/universal-frequency-dividor.html ,Verilog code and testbench was taken from here
 
-[2] https://en.wikipedia.org/wiki/Frequency divider 
+- https://en.wikipedia.org/wiki/Frequencydivider 
 
 - https://eng.libretexts.org/Bookshelves/Electrical Engineering/Electronics/Microwave and RF Design IV%3A Modules (Steer)/06%3A Mixer and Source Modules/6.08%3A Frequency Divider,some content and fig.1. was taken from here..
 
