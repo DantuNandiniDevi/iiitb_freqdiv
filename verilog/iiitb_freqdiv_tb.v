@@ -11,7 +11,8 @@ iiitb_freqdiv f1(en,clk,n,clkout);
 initial
 begin
 clk=0;
-en=1;
+en=0;
+n=3;
 $dumpfile ("iiitb_freqdiv_vcd.vcd"); 
 $dumpvars(0,iiitb_freqdiv_tb);
 
@@ -24,11 +25,11 @@ end
 
 initial
 begin
-n=3;
-#300 n=4; 
-#300 n=11;
-#600 n=6;
-#600 $finish;
+#40 en=1;
+#340 n=4; 
+#440 n=11;
+#1100 n=6;
+#640 $finish;
 
 end 
 endmodule
