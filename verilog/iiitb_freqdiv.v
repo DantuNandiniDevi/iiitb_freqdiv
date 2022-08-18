@@ -3,8 +3,8 @@ module iiitb_freqdiv(en,clkin,n,clkout);
 input clkin;
 input [3:0]n;
 input en;
-reg [3:0]pc=0;
-reg [3:0]nc=0;
+reg [3:0]pc;
+reg [3:0]nc;
 output clkout;
 
 always@(posedge clkin)
@@ -16,6 +16,8 @@ begin
   else
 	pc<=0;
 end
+else
+ pc<=0;
 end
 
 always@(negedge clkin)
@@ -27,8 +29,9 @@ begin
   else
 	nc<=0;
 end
+else
+  nc<=0;
 end
 
 assign clkout=(n%2==0)?(pc<n/2):((pc<(n/2)+1)&&(nc<(n/2)+1));
-
 endmodule
