@@ -22,11 +22,11 @@ This is a frequency divider model which provide frequency division upto 16 of th
  * [klayout installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#klayout-installation)<br>
  * [ngspice installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#ngspice-installation)<br>
  <br>
- [PreSynthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#presynthesis)<br>
+[PreSynthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#presynthesis)<br>
  <br>
- [PostSynthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#postsynthesis)<br>
+[PostSynthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#postsynthesis)<br>
  <br>
- [Layout](https://github.com/DantuNandiniDevi/iiitb_freqdiv#layout)<br>
+[Layout](https://github.com/DantuNandiniDevi/iiitb_freqdiv#layout)<br>
  * [Preparation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#preparation)<br>
  * [Synthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#synthesis)<br>
  - [Synthesis Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#synthesis-reports)<br>
