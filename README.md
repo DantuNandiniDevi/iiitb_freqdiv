@@ -18,6 +18,7 @@ This is a frequency divider model which provide frequency division upto 16 of th
       - [installing Build Essentials](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-build-essential)<br>
       - [installing OpenGL](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-opengl)<br>
       - [installing tcl/tk](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-tcltk)
+      - [installing magic](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-magic)<br>
  * [klayout installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#klayout-installation)<br>
  * [ngspice installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#ngspice-installation)<br>
  <br>
@@ -26,9 +27,32 @@ This is a frequency divider model which provide frequency division upto 16 of th
  [PostSynthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#postsynthesis)<br>
  <br>
  [Layout](https://github.com/DantuNandiniDevi/iiitb_freqdiv#layout)<br>
+ * [Preparation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#preparation)<br>
+ * [Synthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#synthesis)<br>
+ - [Synthesis Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#synthesis-reports)<br>
+ * [Floorplan](https://github.com/DantuNandiniDevi/iiitb_freqdiv#floorplan)<br>
+ - [Floorplan Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#floorplan-reports)<br>
+ * [Placement](https://github.com/DantuNandiniDevi/iiitb_freqdiv#placement)<br>
+ - [placement Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#placement-reports)<br>
+ * [Clock Tree Synthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#clock-tree-synthesis)<br>
+ * [Routing](https://github.com/DantuNandiniDevi/iiitb_freqdiv#routing)<br>
+ - [Routing Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#routing-reports)<br>
+ <br>
+ [Viewing layout in klayout](https://github.com/DantuNandiniDevi/iiitb_freqdiv#viewing-layout-in-klayout)<br>
+ <br>
+ [Note](https://github.com/DantuNandiniDevi/iiitb_freqdiv#note)<br>
+ <br>
+ [Errors and Solutions](https://github.com/DantuNandiniDevi/iiitb_freqdiv#errors-and-solutions)<br>
+ * [Error 1](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-1)<br>
+ * [Error 2](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-2)<br>
+ * [Error 3](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-3)<br>
+ * [Error 4](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-4)<br>
+ <br>
+ [Future Work](https://github.com/DantuNandiniDevi/iiitb_freqdiv#future-work)<br>
+ <br>
+ [References](https://github.com/DantuNandiniDevi/iiitb_freqdiv#reference)<br>
+ <br>
  
- 
-
 # Description
 
 This document is a model and analysis of a Freqency Divider. This model will contain a 4 bit number lines to select by which factor does the input frequency has to be divided. It is simulated using verilog, synthesis is performed using yosys.
@@ -442,7 +466,7 @@ The sky130_vsdinv should also reflect in your netlist after placement <br>
 ```
 ![22](https://user-images.githubusercontent.com/62461290/187060096-ad41aab7-6435-45c8-a266-e6ebb955d691.png)<br>
 
-### Routing View
+### Routing Reports
 Navigate to results->routing and type the Magic command in terminal to open the routing view <br>
 ```
 $ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_freqdiv.def &
