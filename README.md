@@ -4,10 +4,30 @@ This is a frequency divider model which provide frequency division upto 16 of th
 # Table of Contents
 
 [Description](https://github.com/DantuNandiniDevi/iiitb_freqdiv#description)<br>
+<br>
 [Tools Used](https://github.com/DantuNandiniDevi/iiitb_freqdiv#tools-used)<br>
-* [Icarus Verilog (iverilog) GTKWave installation on ubuntu](https://github.com/DantuNandiniDevi/iiitb_freqdiv#icarus-verilog-iverilog-gtkwave-installation-on-ubuntu)<br>
-* [Yosys installation on ubuntu](https://github.com/DantuNandiniDevi/iiitb_freqdiv#yosys-installation-on-ubuntu)
-* [Python installation]
+* [Icarus Verilog (iverilog) GTKWave installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#icarus-verilog-iverilog-gtkwave-installation)<br>
+* [Yosys installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#yosys-installation)<br>
+* [Python installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#python-installation)<br>
+* [Docker installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#docker-installation)<br>
+* [Openlane installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#openlane-installation)<br>
+* [Magic installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#magic-installation)<br>
+      - [installing csh](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-csh)<br>
+      - [installing x11/xorg](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-x11xorg)<br>
+      - [installing GCC](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-gcc)<br>
+      - [installing Build Essentials](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-build-essential)<br>
+      - [installing OpenGL](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-opengl)<br>
+      - [installing tcl/tk](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-tcltk)
+ * [klayout installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#klayout-installation)<br>
+ * [ngspice installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#ngspice-installation)<br>
+ <br>
+ [PreSynthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#presynthesis)<br>
+ <br>
+ [PostSynthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#postsynthesis)<br>
+ <br>
+ [Layout](https://github.com/DantuNandiniDevi/iiitb_freqdiv#layout)<br>
+ 
+ 
 
 # Description
 
@@ -152,7 +172,7 @@ $ sudo apt-get install freeglut3-dev
 ```
 $ sudo apt-get install tcl-dev tk-dev
 ```
-
+### Installing magic
 After all the softwares are installed, run the following commands for installing magic:
 
 ```
@@ -236,6 +256,7 @@ $ gtkwave iiitb_freqdiv_vcd.vcd
 
 # Layout
 
+## Preparation
 The layout is generated using OpenLane. To run a custom design on openlane, Navigate to the openlane folder and run the following commands:<br>
 ```
 $ cd designs
