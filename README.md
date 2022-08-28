@@ -12,13 +12,13 @@ This is a frequency divider model which provide frequency division upto 16 of th
 * [Docker installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#docker-installation)<br>
 * [Openlane installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#openlane-installation)<br>
 * [Magic installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#magic-installation)<br>
-      - [installing csh](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-csh)<br>
-      - [installing x11/xorg](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-x11xorg)<br>
-      - [installing GCC](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-gcc)<br>
-      - [installing Build Essentials](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-build-essential)<br>
-      - [installing OpenGL](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-opengl)<br>
-      - [installing tcl/tk](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-tcltk)
-      - [installing magic](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-magic)<br>
+    - [installing csh](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-csh)<br>
+    - [installing x11/xorg](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-x11xorg)<br>
+    - [installing GCC](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-gcc)<br>
+    - [installing Build Essentials](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-build-essential)<br>
+    - [installing OpenGL](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-opengl)<br>
+    - [installing tcl/tk](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-tcltk)
+    - [installing magic](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-magic)<br>
  * [klayout installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#klayout-installation)<br>
  * [ngspice installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#ngspice-installation)<br>
 
@@ -39,8 +39,6 @@ This is a frequency divider model which provide frequency division upto 16 of th
      - [Routing Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#routing-reports)<br>
 
 
-
- <br>
  [Viewing layout in klayout](https://github.com/DantuNandiniDevi/iiitb_freqdiv#viewing-layout-in-klayout)<br>
  <br>
  [Note](https://github.com/DantuNandiniDevi/iiitb_freqdiv#note)<br>
@@ -50,7 +48,9 @@ This is a frequency divider model which provide frequency division upto 16 of th
  * [Error 2](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-2)<br>
  * [Error 3](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-3)<br>
  * [Error 4](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-4)<br>
- <br>
+
+
+ 
  [Future Work](https://github.com/DantuNandiniDevi/iiitb_freqdiv#future-work)<br>
  <br>
  [References](https://github.com/DantuNandiniDevi/iiitb_freqdiv#reference)<br>
