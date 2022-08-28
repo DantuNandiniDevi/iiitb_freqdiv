@@ -29,14 +29,16 @@ This is a frequency divider model which provide frequency division upto 16 of th
 [Layout](https://github.com/DantuNandiniDevi/iiitb_freqdiv#layout)<br>
  * [Preparation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#preparation)<br>
  * [Synthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#synthesis)<br>
- - [Synthesis Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#synthesis-reports)<br>
+     - [Synthesis Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#synthesis-reports)<br>
  * [Floorplan](https://github.com/DantuNandiniDevi/iiitb_freqdiv#floorplan)<br>
- - [Floorplan Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#floorplan-reports)<br>
+     - [Floorplan Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#floorplan-reports)<br>
  * [Placement](https://github.com/DantuNandiniDevi/iiitb_freqdiv#placement)<br>
- - [placement Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#placement-reports)<br>
+     - [placement Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#placement-reports)<br>
  * [Clock Tree Synthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#clock-tree-synthesis)<br>
  * [Routing](https://github.com/DantuNandiniDevi/iiitb_freqdiv#routing)<br>
- - [Routing Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#routing-reports)<br>
+     - [Routing Reports](https://github.com/DantuNandiniDevi/iiitb_freqdiv#routing-reports)<br>
+
+
 
  <br>
  [Viewing layout in klayout](https://github.com/DantuNandiniDevi/iiitb_freqdiv#viewing-layout-in-klayout)<br>
