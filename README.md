@@ -228,9 +228,64 @@ $ gtkwave iiitb_freqdiv_vcd.vcd
 
 # Layout
 
-The layout is running using OpenLane. <br>
+The layout is generated using OpenLane. To run a custom design on openlane, Navigate to the openlane folder and run the following commands:<br>
+```
+$ cd designs
 
-Navigate to the openlane folder in terminal and give the following command :<br>
+$ mkdir iiitb_freqdiv
+
+$ cd iiitb_freqdiv
+
+$ mkdir src
+
+$ touch config.json
+
+$ cd src
+
+$ touch iiitb_freqdiv.v
+```
+
+The iiitb_freqdiv.v file should contain the verilog RTL code you have used and got the post synthesis simulation for. <br>
+
+Copy  `sky130_fd_sc_hd__fast.lib`, `sky130_fd_sc_hd__slow.lib`, `sky130_fd_sc_hd__typical.lib` and `sky130_vsdinv.lef` files to `src` folder in your design. <br>
+
+The final src folder should look like this: <br>
+
+![f2](https://user-images.githubusercontent.com/62461290/187058789-46914626-3965-41c8-8336-cff2ed949889.png) <br>
+
+The contents of the config.json are as follows. this can be modified specifically for your design as and when required. <br>
+
+As mentioned by kunal sir dont use defined `DIE_AREA` and `FP_SIZING : absolute`, use `FP_SIZING : relative`
+```
+{
+    "DESIGN_NAME": "iiitb_freqdiv",
+    "VERILOG_FILES": "dir::src/iiitb_freqdiv.v",
+    "CLOCK_PORT": "clkin",
+    "CLOCK_NET": "clkin",
+    "GLB_RESIZER_TIMING_OPTIMIZATIONS": true,
+    "CLOCK_PERIOD": 10,
+    "PL_TARGET_DENSITY": 0.7,
+    "FP_SIZING" : "relative",
+    "pdk::sky130*": {
+        "FP_CORE_UTIL": 30,
+        "scl::sky130_fd_sc_hd": {
+            "FP_CORE_UTIL": 20
+        }
+    },
+    
+    "LIB_SYNTH": "dir::src/sky130_fd_sc_hd__typical.lib",
+    "LIB_FASTEST": "dir::src/sky130_fd_sc_hd__fast.lib",
+    "LIB_SLOWEST": "dir::src/sky130_fd_sc_hd__slow.lib",
+    "LIB_TYPICAL": "dir::src/sky130_fd_sc_hd__typical.lib",  
+    "TEST_EXTERNAL_GLOB": "dir::../iiitb_freqdiv/src/*"
+
+
+}
+```
+
+
+
+Save all the changes made above and Navigate to the openlane folder in terminal and give the following command :<br>
 
 ```
 $ make mount (if this command doesnot go through prefix it with sudo)
@@ -254,6 +309,17 @@ This command will take you into the tcl console. In the tcl console type the fol
 ```
 ![4](https://user-images.githubusercontent.com/62461290/186196159-9444df4e-9580-4a04-ba68-c79190d78863.png)<br>
 
+The following commands are to merge external the lef files to the merged.nom.lef. In our case sky130_vsdiat is getting merged to the lef file <br>
+```
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+```
+![f1](https://user-images.githubusercontent.com/62461290/187058441-e4b64b62-d99d-49b6-8ea5-086afed01b75.png) <br>
+<br>
+The contents of the merged.nom.lef file should contain the Macro definition of sky130_vsdinv <br>
+<br>
+![f3](https://user-images.githubusercontent.com/62461290/187058907-0105481f-b632-4d0c-8d13-40a7f702a10d.png)
+
 ## Synthesis
 ```
 % run_synthesis
@@ -262,97 +328,123 @@ This command will take you into the tcl console. In the tcl console type the fol
 
 ### Synthesis Reports
 Details of the gates used <br>
-![6](https://user-images.githubusercontent.com/62461290/186196164-fe84ae83-bcbc-4b19-aacd-33e3cae190eb.png)<br>
-Setup Slack after synthesis<br>
-![7](https://user-images.githubusercontent.com/62461290/186196166-f7891cfa-f494-4424-9362-7e687439b896.png)<br>
-Hold Slack after synthesis<br>
-![8](https://user-images.githubusercontent.com/62461290/186196172-adb3cd87-1b50-4dd7-93fa-90913282cf8b.png)<br>
-Power Report after synthesis <br>
-![10](https://user-images.githubusercontent.com/62461290/186196178-6372f2ae-23d8-4beb-9fea-01a5e46ad98c.png)<br>
-Area Report after synthesis <br>
-![11](https://user-images.githubusercontent.com/62461290/186196181-8c1a7d06-257b-4531-98b3-1debcda90723.png)<br>
+<br>
+![5](https://user-images.githubusercontent.com/62461290/187059146-d8875af6-8feb-4d1a-b908-3fb5c40af428.png)<br>
+<br>
+Setup and Hold Slack after synthesis<br>
+<br>
+![7](https://user-images.githubusercontent.com/62461290/187059191-bc94260c-1867-4167-a6d3-4a2397416b7f.png)<br>
+<br>
+```
+Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 8/71 = 0.1125
+```
+<br>
+The sky130_vsdinv should also reflect in your netlist after synthesis <br>
+<br>
+
+![9](https://user-images.githubusercontent.com/62461290/187059397-9d745276-f506-45cb-a62f-c369a165e8e9.png)
+
 
 ## Floorplan
 ```
 % run_floorplan
 ```
-![12](https://user-images.githubusercontent.com/62461290/186196186-4b53f186-3f44-4147-9079-699ac4567c1f.png) <br>
+![10](https://user-images.githubusercontent.com/62461290/187059432-528152fe-2ec3-4aea-9045-1a5187dc7266.png)<br>
 
 ### Floorplan Reports
 Die Area <br>
-![13 die area](https://user-images.githubusercontent.com/62461290/186196191-89e19512-a102-4448-b12e-70273a85f3dd.png)<br>
+<br>
+![12 die](https://user-images.githubusercontent.com/62461290/187059493-d33c91d9-d238-4e9c-8a53-0f4a0b6fa40b.png)<br>
+<br>
 Core Area <br>
-![14 core area](https://user-images.githubusercontent.com/62461290/186196192-16061428-637d-4110-b3d8-b6e423c6a179.png)<br>
-Magic command to open the floorplan <br>
+<br>
+![11 core](https://user-images.githubusercontent.com/62461290/187059503-233981d6-baf2-46c5-b8e6-979e18baf189.png)<br>
+
+Navigate to results->floorplan and type the Magic command in terminal to open the floorplan <br>
 ```
-$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.max.lef def read iiitb_freqdiv.def &
+$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_freqdiv.def &
 ```
-![15](https://user-images.githubusercontent.com/62461290/186196194-8eea1851-7cdf-4e34-9fee-60bf383e9e71.png)<br>
+![14](https://user-images.githubusercontent.com/62461290/187059593-bdf6b441-9cb8-4838-a2a0-5638af1c7c02.png)<br>
+<br>
 Floorplan view <br>
-![16](https://user-images.githubusercontent.com/62461290/186196199-cddc8944-aa5a-4280-9bbf-f35305475fba.png)<br>
+<br>
+![13](https://user-images.githubusercontent.com/62461290/187059569-1b8184d1-47e1-4ec3-9539-17e317aedacb.png)<br>
+<br>
+All the cells are placed in the left corner of the floorplan<br>
+<br>
+![15](https://user-images.githubusercontent.com/62461290/187059629-b135d6dd-dd77-4a0d-a322-6c8864a6210c.png)
 
 ## Placement
 ```
 % run_placement
 ```
-![17](https://user-images.githubusercontent.com/62461290/186196200-1ab8ad67-44d1-4ab2-bd43-522fc0ef1d47.png)<br>
+![16](https://user-images.githubusercontent.com/62461290/187059712-d8940d40-04f7-4eac-acf6-24ee71c79103.png)<br>
 
 ### Placement Reports
-Magic command to open the floorplan <br>
+Navigate to results->placement and type the Magic command in terminal to open the placement view <br>
 ```
 $ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.max.lef def read iiitb_freqdiv.def &
 ```
-![19](https://user-images.githubusercontent.com/62461290/186196056-035b823b-004d-4e36-b1e2-271b3388e2d4.png)<br>
+![19](https://user-images.githubusercontent.com/62461290/187059871-7f4746b1-87ec-40fb-827b-e76df64e3e3d.png)<br>
+<br>
 Placement View <br>
-![18](https://user-images.githubusercontent.com/62461290/186196203-8721a32c-e777-4675-94ce-30c598a80768.png)<br>
-Hold and Setup Slack after placement <br>
-![20](https://user-images.githubusercontent.com/62461290/186196068-876e618c-143a-4cb0-bef6-9a401d836434.png)<br>
-Power Utilization after placement <br>
-![22](https://user-images.githubusercontent.com/62461290/186196074-174de3f5-9e47-4e73-8b2e-e89176120bfc.png)<br>
-Area  Utilization after placement <br>
-![23](https://user-images.githubusercontent.com/62461290/186196075-8feaeacf-31eb-46f7-a5d7-a4c3945f42d3.png)<br>
-Hold and Setup Slack after placement resize<br>
-![24](https://user-images.githubusercontent.com/62461290/186201336-be5d0313-299b-42cc-9c60-711d0dd0b764.png)<br>
-Power Utilization after placement resize <br>
-![25 resize](https://user-images.githubusercontent.com/62461290/186196084-4566f705-c325-4160-886d-f1b2ab0d69d2.png)<br>
-Area  Utilization after placement resize<br>
-![26 resize](https://user-images.githubusercontent.com/62461290/186196089-53ae650a-eb70-4f99-af57-78d6ce239f40.png)<br>
+<br>
+![17](https://user-images.githubusercontent.com/62461290/187059887-35c59d00-b959-4983-97f7-f229db63ca4b.png)<br>
+<br>
+![Screenshot 2022-08-28 112324](https://user-images.githubusercontent.com/62461290/187059896-3cd7613c-abdd-4838-81dc-0291a7a63241.png)<br>
+<br>
+<b>sky130_vsdinv</b> in the placement view :<br>
+<br>
+![18](https://user-images.githubusercontent.com/62461290/187059910-27dc9f35-9a5c-4518-8dc5-7c8238747b57.png)<br>
+<br>
+The sky130_vsdinv should also reflect in your netlist after placement <br>
+<br>
+![20](https://user-images.githubusercontent.com/62461290/187060017-d9e3eb1b-2cf6-4056-b7e8-4f9afd9daa5b.png)<br>
 
 ## Clock Tree Synthesis
 ```
 % run_cts
 ```
-![27](https://user-images.githubusercontent.com/62461290/186196119-6291ce2a-f275-4e7a-bc9e-04fe4446cb10.png)<br>
-
-### Clock Tree Synthesis Reports
-Power Utilization after cts <br>
-![27 nrb](https://user-images.githubusercontent.com/62461290/186206817-753eb091-a773-4d61-b0a5-b829b6ce35fb.png)<br>
-Hold and Setup Slack after cts <br>
-![27 nra](https://user-images.githubusercontent.com/62461290/186202210-c90110f6-3205-4c36-ae54-1a11fff6d5bc.png)<br>
-Hold and Setup Slack after cts resize<br>
-![27 a](https://user-images.githubusercontent.com/62461290/186202169-a844b5c0-af82-4395-b9e9-6744418c7053.png)<br>
-Power Utilization after cts resize<br>
-![27 b](https://user-images.githubusercontent.com/62461290/186196104-616c891a-0f0b-49a8-993b-a8815f513550.png)<br>
+![21](https://user-images.githubusercontent.com/62461290/187060069-447e33ad-952c-4303-92ac-cfbd45dd91b1.png)<br>
 
 ## Routing
 ```
 % run_routing
 ```
-![28](https://user-images.githubusercontent.com/62461290/186196129-f2370254-0c01-41ae-89ec-194155fa96a7.png)<br>
+![22](https://user-images.githubusercontent.com/62461290/187060096-ad41aab7-6435-45c8-a266-e6ebb955d691.png)<br>
+
 ### Routing View
-Magic command to open the floorplan <br>
+Navigate to results->routing and type the Magic command in terminal to open the routing view <br>
 ```
-$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.max.lef def read iiitb_freqdiv.def &
+$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_freqdiv.def &
 ```
-![28 c](https://user-images.githubusercontent.com/62461290/186196126-6e4144c3-5fdf-4d85-bcd5-04e3ac129e7d.png)<br>
-![28 a ](https://user-images.githubusercontent.com/62461290/186196120-ba8739a7-b2ce-4504-8a1b-b9ea55e7ba27.png)<br>
-![28 b](https://user-images.githubusercontent.com/62461290/186196122-eddc61b9-1cca-40a0-a735-c4708f680faf.png)<br>
+![23](https://user-images.githubusercontent.com/62461290/187060186-ec8a606b-9f79-4bb4-b0fe-5088fed426bb.png)<br>
+<br>
+Routing View<br>
+<br>
+![24](https://user-images.githubusercontent.com/62461290/187060219-d3194c75-d7b6-44c8-b760-19688209ca30.png)<br>
+<br>
+![25](https://user-images.githubusercontent.com/62461290/187060241-5e1341a4-0293-4957-aded-f30660d226e2.png)<br>
+<br>
+<b>sky130_vsdinv</b> in the routing view :<br>
+<br>
+![26](https://user-images.githubusercontent.com/62461290/187060280-5f093b87-366e-4355-a506-aa140022c78a.png)<br>
+<br>
+Area report by magic :<br>
+<br>
+![27](https://user-images.githubusercontent.com/62461290/187060331-cb12a7ce-963a-420e-9b38-12f137c11e9c.png)<br>
+<br>
+The sky130_vsdinv should also reflect in your netlist after routing <br>
+<br>
+![28](https://user-images.githubusercontent.com/62461290/187060367-db21b544-21b1-4447-9756-bc7aa947d23d.png)<br>
 
 ## Viewing Layout in KLayout
 
-![29 klayout](https://user-images.githubusercontent.com/62461290/186196141-f0ec3efd-0269-47f7-9c27-3c9aaa2a233e.png)<br>
+![klayou1](https://user-images.githubusercontent.com/62461290/187060556-280c7dc4-0f2f-4c0b-aac3-eec6d542ee06.png) <br>
 
-![29 a](https://user-images.githubusercontent.com/62461290/186196138-bbddd0d4-6ae9-42fa-9c53-7c131eb432be.png)<br>
+![klayout2](https://user-images.githubusercontent.com/62461290/187060558-73bbc257-a068-4a11-9cf8-f91d2556b72f.png)<br>
+
+![klayout3](https://user-images.githubusercontent.com/62461290/187060560-52d90a53-e509-4319-ae06-3781c246f384.png)<br>
 
 
 ### NOTE
@@ -361,7 +453,7 @@ We can also run the whole flow at once instead of step by step process by giving
 $ ./flow.tcl -design iiitb_freqdiv
 ```
 ![100](https://user-images.githubusercontent.com/62461290/186196145-6850e928-d54a-404d-ad30-1fdb124a883b.png)<br>
-
+<br>
 All the steps will be automated and all the files will be generated.<br>
 
 we can open the mag file and view the layout after the whole process by the following command, you can follow the path as per the image.<br>
@@ -369,12 +461,48 @@ we can open the mag file and view the layout after the whole process by the foll
 ```
 $ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech iiitb_freqdiv.mag &
 ```
+<br>
+
 ![30](https://user-images.githubusercontent.com/62461290/186206184-3f146947-84d9-4178-9dd2-c54330067168.png)<br>
 ![31](https://user-images.githubusercontent.com/62461290/186206194-4ea81f2f-ab7f-4d34-840d-7aabff547774.png)<br>
 ![32](https://user-images.githubusercontent.com/62461290/186206196-526af125-b092-4bfc-9025-33dad27a3e6e.png)<br>
 
 
+# Errors and Solutions
+## Error 1
 
+If the below error occurs while doing `make mount` replace it with `sudo make mount`<br>
+<br>
+
+![error1](https://user-images.githubusercontent.com/62461290/187061092-d76638cb-4fec-4071-b5d2-94c81fd06720.png)
+
+## Error 2
+
+If you face the below error play around with the values of `PL_TARGET_DENSITY`, `FP_CORE_UTIL` and `CLOCK_PERIOD` until it works for your design, these values are very custom for each and every design. <br>
+<br>
+
+![error](https://user-images.githubusercontent.com/62461290/187060613-a21b3443-92fd-4e1e-8ab5-d17d5b7466d4.png)<br>
+
+## Error 3
+
+Make sure the name of the module is same throughout, otherwise it will not infer the macro.<br>
+<br>
+
+![error3](https://user-images.githubusercontent.com/62461290/187060702-e99e2389-6518-4253-961f-4e639cbd1ecd.png)
+![error4](https://user-images.githubusercontent.com/62461290/187060706-871d59b7-c212-40fa-b492-382d8ea94c04.png)
+![error5](https://user-images.githubusercontent.com/62461290/187060692-91a34f20-d31f-4663-9dd2-ed9231811994.png)<br>
+
+## Error 4
+
+If you are getting the below error please add `"TEST_EXTERNAL_GLOB": "dir::../iiitb_freqdiv/src/*"` to the config.json file.
+<br>
+<br>
+
+![error6](https://user-images.githubusercontent.com/62461290/187060745-62738ad9-241c-430d-bd5b-321c0d792b3d.png)<br>
+
+# Future Work
+
+- If the number of inverters are less in the design they are not getting converted to sky130_vsdinv custom inverters. We have to figure out this issue and make it work.<br>
 
 # Reference
 
