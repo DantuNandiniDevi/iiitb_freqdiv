@@ -1,7 +1,13 @@
 # iiitb_freqdiv - Frequency Divider
 This is a frequency divider model which provide frequency division upto 16 of the input clock.
 
-</br>
+# Table of Contents
+
+[Description](https://github.com/DantuNandiniDevi/iiitb_freqdiv#description)<br>
+[Tools Used](https://github.com/DantuNandiniDevi/iiitb_freqdiv#tools-used)<br>
+* [Icarus Verilog (iverilog) GTKWave installation on ubuntu](https://github.com/DantuNandiniDevi/iiitb_freqdiv#icarus-verilog-iverilog-gtkwave-installation-on-ubuntu)<br>
+* [Yosys installation on ubuntu](https://github.com/DantuNandiniDevi/iiitb_freqdiv#yosys-installation-on-ubuntu)
+* [Python installation]
 
 # Description
 
@@ -25,11 +31,13 @@ Fig 2: Basic I/O diagram
 </p>
 
 # Tools Used
+The installtion commands are given by taking ubuntu as the operating system.
+
 For installating various softwares used in this project, open the terminal by right clicking on an empty space and type the respective commands in the terminal: <br>
 
 <b> Note: If any of the commands that do not have sudo in the prefix doesnot go through, please add a prefix of sudo and try running it. </b>
 
-## Icarus Verilog (iverilog) GTKWave installation on ubuntu
+## Icarus Verilog (iverilog) GTKWave installation
 
 ```
 $ sudo apt-get update
@@ -39,7 +47,7 @@ $ sudo apt-get install iverilog gtkwave
 
 This can be installed on windows as well by directly downloading and installing the .exe file of icarus
 
-## Yosys installation on ubuntu
+## Yosys installation
 
 Open the terminal by right clicking on am empty space in the directory u want to install and type the following commands:
 
