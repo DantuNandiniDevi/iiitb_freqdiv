@@ -44,15 +44,14 @@ This is a frequency divider model which provide frequency division upto 16 of th
  [Note](https://github.com/DantuNandiniDevi/iiitb_freqdiv#note)<br>
  <br>
  [Errors and Solutions](https://github.com/DantuNandiniDevi/iiitb_freqdiv#errors-and-solutions)<br>
- * [Error 1](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-1)<br>
- * [Error 2](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-2)<br>
- * [Error 3](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-3)<br>
- * [Error 4](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-4)<br>
+ * [Error 1 : make mount permission denied](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-1)<br>
+ * [Error 2 : Target density error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-2)<br>
+ * [Error 3 : Files name mismatch error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-3)<br>
+ * [Error 4 : No Macro Error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-4)<br>
+ * [Error 5 : sky130_vsdinv not reflecting in stat](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-5)<br>
 
 
  
- [Future Work](https://github.com/DantuNandiniDevi/iiitb_freqdiv#future-work)<br>
- <br>
  [References](https://github.com/DantuNandiniDevi/iiitb_freqdiv#reference)<br>
  <br>
  
@@ -556,9 +555,10 @@ If you are getting the below error please add `"TEST_EXTERNAL_GLOB": "dir::../ii
 
 ![error6](https://user-images.githubusercontent.com/62461290/187060745-62738ad9-241c-430d-bd5b-321c0d792b3d.png)<br>
 
-# Future Work
+## Error 5
 
-- If the number of inverters are less in the design they are not getting converted to sky130_vsdinv custom inverters. We have to figure out this issue and make it work.<br>
+If the sky130_vsdinv files are not getting reflected in stat even when the merging was successful and the cell is seen in the merged.nom.lef file. Please use the libraries uploaded in this github page to get the sky130_vsdinv to reflecct in your stat.<br>
+
 
 # Reference
 
