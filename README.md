@@ -559,6 +559,8 @@ If you are getting the below error please add `"TEST_EXTERNAL_GLOB": "dir::../ii
 
 If the sky130_vsdinv files are not getting reflected in stat even when the merging was successful and the cell is seen in the merged.nom.lef file. Please use the libraries uploaded in this github page to get the sky130_vsdinv to reflecct in your stat.<br>
 
+`"SYNTH_DRIVING_CELL":"sky130_vsdinv"` please add this to the config.json file while including these libraries. <br>
+
 
 # Reference
 
