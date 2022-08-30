@@ -569,7 +569,8 @@ If the sky130_vsdinv files are not getting reflected in stat even when the mergi
 If you are getting the below error, please check the file name and macro name of `sky130_vsdinv` shoud be same as the once mentioned in  `sky130_fd_sc_hd__fast.lib`, `sky130_fd_sc_hd__slow.lib`, `sky130_fd_sc_hd__typical.lib`<br>
 <br>
 
-![WhatsApp Image 2022-08-30 at 2 56 56 PM](https://user-images.githubusercontent.com/62461290/187409708-80412472-5530-44c0-bbae-533a4545fbae.jpeg)
+![WhatsApp Image 2022-08-30 at 4 16 12 PM](https://user-images.githubusercontent.com/62461290/187418027-9c620ff6-c86f-4695-8e65-20ac84898742.jpeg)
+
 
 ## Error 7
 
@@ -579,7 +580,7 @@ If you are getting the below error, please use merged.nom.lef file while opening
 $ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_freqdiv.def &
 ```
 
-![WhatsApp Image 2022-08-30 at 3 26 34 PM](https://user-images.githubusercontent.com/62461290/187411645-18e2efbe-e019-458a-8d4c-c5b2a14f09f9.jpeg)
+![error7](https://user-images.githubusercontent.com/62461290/187417649-cbafa63e-a68b-4497-9f59-eee3e6963b2c.png)
 
 
 
