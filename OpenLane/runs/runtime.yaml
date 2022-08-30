@@ -1,0 +1,85 @@
+- status: 0 - openlane design prep
+  runtime_s: 2.55
+  runtime_ts: 0h0m2s549ms
+- status: 1 - synthesis - yosys
+  runtime_s: 1.1
+  runtime_ts: 0h0m1s102ms
+- status: 2 - sta - openroad
+  runtime_s: 0.49
+  runtime_ts: 0h0m0s490ms
+- status: 3 - floorplan initialization - openroad
+  runtime_s: 0.69
+  runtime_ts: 0h0m0s685ms
+- status: 4 - ioplace - openroad
+  runtime_s: 0.2
+  runtime_ts: 0h0m0s196ms
+- status: 5 - tap/decap insertion - openroad
+  runtime_s: 0.2
+  runtime_ts: 0h0m0s203ms
+- status: 6 - pdn generation - openroad
+  runtime_s: 0.43
+  runtime_ts: 0h0m0s433ms
+- status: 7 - global placement - openroad
+  runtime_s: 0.74
+  runtime_ts: 0h0m0s742ms
+- status: 8 - resizer design optimizations - openroad
+  runtime_s: 0.52
+  runtime_ts: 0h0m0s517ms
+- status: 9 - write verilog - openroad
+  runtime_s: 0.18
+  runtime_ts: 0h0m0s182ms
+- status: 10 - remove buffers from nets - openlane
+  runtime_s: 0.24
+  runtime_ts: 0h0m0s240ms
+- status: 11 - detailed placement - openroad
+  runtime_s: 0.23
+  runtime_ts: 0h0m0s234ms
+- status: 12 - cts
+  runtime_s: 21.63
+  runtime_ts: 0h0m21s629ms
+- status: 13 - write verilog - openroad
+  runtime_s: 0.17
+  runtime_ts: 0h0m0s173ms
+- status: 14 - resizer timing optimizations - openroad
+  runtime_s: 0.57
+  runtime_ts: 0h0m0s575ms
+- status: 15 - write verilog - openroad
+  runtime_s: 0.2
+  runtime_ts: 0h0m0s200ms
+- status: 16 - remove buffers from nets - openlane
+  runtime_s: 0.25
+  runtime_ts: 0h0m0s250ms
+- status: 17 - detailed placement - openroad
+  runtime_s: 0.21
+  runtime_ts: 0h0m0s210ms
+- status: 18 - global routing - openroad
+  runtime_s: 0.59
+  runtime_ts: 0h0m0s590ms
+- status: 19 - fill insertion - openroad
+  runtime_s: 0.22
+  runtime_ts: 0h0m0s218ms
+- status: 20 - write verilog - openroad
+  runtime_s: 0.17
+  runtime_ts: 0h0m0s174ms
+- status: 21 - detailed_routing - openroad
+  runtime_s: 4.91
+  runtime_ts: 0h0m4s910ms
+- status: 22 - write verilog - openroad
+  runtime_s: 0.18
+  runtime_ts: 0h0m0s177ms
+- status: 23 - gdsii - magic
+  runtime_s: 1.27
+  runtime_ts: 0h0m1s274ms
+- status: 24 - spice extraction - magic
+  runtime_s: 0.5
+  runtime_ts: 0h0m0s498ms
+- status: 25 - drc - magic
+  runtime_s: 1.5
+  runtime_ts: 0h0m1s504ms
+---
+- status: routed
+  runtime_s: 3508.0
+  runtime_ts: 0h58m28s0ms
+- status: flow failed
+  runtime_s: 4260.0
+  runtime_ts: 1h11m0s0ms
