@@ -48,7 +48,7 @@ This is a frequency divider model which provide frequency division upto 16 of th
  <br>
  [Errors and Solutions](https://github.com/DantuNandiniDevi/iiitb_freqdiv#errors-and-solutions)<br>
  * [Error 1 : make mount permission denied](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-1)<br>
- * [Error 2 : Target density error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-2)<br>
+ * [Error 2 : placement failed error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-2)<br>
  * [Error 3 : Files name mismatch error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-3)<br>
  * [Error 4 : No Macro Error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-4)<br>
  * [Error 5 : sky130_vsdinv not reflecting in stat](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-5)<br>
