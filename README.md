@@ -467,7 +467,7 @@ $ make mount (if this command doesnot go through prefix it with sudo)
 
 After entering the openlane container give the following command:<br>
 ```
-$ ./flow.tcl interactive
+$ ./flow.tcl -interactive
 ```
 ![2](https://user-images.githubusercontent.com/62461290/186196149-b595f203-a711-46cc-8949-39bee6de552e.png)
 
