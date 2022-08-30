@@ -1,0 +1,161 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO iiitb_freqdiv
+  CLASS BLOCK ;
+  FOREIGN iiitb_freqdiv ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 69.110 BY 79.830 ;
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 19.200 10.640 20.800 68.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 33.685 10.640 35.285 68.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 48.170 10.640 49.770 68.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 62.655 10.640 64.255 68.800 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 24.360 64.255 25.960 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 38.640 64.255 40.240 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 52.920 64.255 54.520 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 67.200 64.255 68.800 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 11.960 10.640 13.560 68.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 26.445 10.640 28.045 68.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 40.930 10.640 42.530 68.240 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 55.415 10.640 57.015 68.240 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 17.220 63.720 18.820 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 31.500 63.720 33.100 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 45.780 63.720 47.380 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 60.060 63.720 61.660 ;
+    END
+  END VPWR
+  PIN clkin
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 65.110 57.840 69.110 58.440 ;
+    END
+  END clkin
+  PIN clkout
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 41.950 0.000 42.230 4.000 ;
+    END
+  END clkout
+  PIN en
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 44.240 4.000 44.840 ;
+    END
+  END en
+  PIN n[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 0.090 0.000 0.370 4.000 ;
+    END
+  END n[0]
+  PIN n[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 6.530 75.830 6.810 79.830 ;
+    END
+  END n[1]
+  PIN n[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 48.390 75.830 48.670 79.830 ;
+    END
+  END n[2]
+  PIN n[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 65.110 13.640 69.110 14.240 ;
+    END
+  END n[3]
+  OBS
+      LAYER li1 ;
+        RECT 5.520 10.795 63.480 68.085 ;
+      LAYER met1 ;
+        RECT 0.070 10.640 64.255 68.240 ;
+      LAYER met2 ;
+        RECT 0.100 75.550 6.250 75.830 ;
+        RECT 7.090 75.550 48.110 75.830 ;
+        RECT 48.950 75.550 64.225 75.830 ;
+        RECT 0.100 4.280 64.225 75.550 ;
+        RECT 0.650 4.000 41.670 4.280 ;
+        RECT 42.510 4.000 64.225 4.280 ;
+      LAYER met3 ;
+        RECT 4.000 58.840 65.110 68.165 ;
+        RECT 4.000 57.440 64.710 58.840 ;
+        RECT 4.000 45.240 65.110 57.440 ;
+        RECT 4.400 43.840 65.110 45.240 ;
+        RECT 4.000 14.640 65.110 43.840 ;
+        RECT 4.000 13.240 64.710 14.640 ;
+        RECT 4.000 10.715 65.110 13.240 ;
+  END
+END iiitb_freqdiv
+END LIBRARY
+
