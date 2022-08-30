@@ -26,6 +26,9 @@ This is a frequency divider model which provide frequency division upto 16 of th
  <br>
 [PostSynthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#postsynthesis)<br>
  <br>
+ 
+ [Creating a Custom Cell](https://github.com/DantuNandiniDevi/iiitb_freqdiv/edit/main/README.md#creating-a-custom-inverter-cell)
+ 
 [Layout](https://github.com/DantuNandiniDevi/iiitb_freqdiv#layout)<br>
  * [Preparation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#preparation)<br>
  * [Synthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#synthesis)<br>
@@ -283,6 +286,117 @@ $ gtkwave iiitb_freqdiv_vcd.vcd
 <p align="center">
 <img src="https://user-images.githubusercontent.com/62461290/184857905-2e755fa3-74ad-4a46-8683-94a24dfcb488.png"> <br>
 </p>
+
+# Creating a Custom Inverter Cell
+
+Open Terminal in the folder you want to create the custom inverter cell.
+
+```
+$ git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+
+$ cd vsdstdcelldesign
+
+$  cp ./libs/sky130A.tech sky130A.tech
+
+$ magic -T sky130A.tech sky130_inv.mag &
+```
+
+![1](https://user-images.githubusercontent.com/62461290/187424346-c798a1a0-3e8b-43c8-a14a-7fc75e51ef2a.png)<br>
+
+The above layout will open. The design can be verified and various layers can be seen and examined by selecting the area of examination and type `what` in the tcl window.
+
+To extract Spice netlist, Type the following commands in tcl window.
+
+```
+% extract all
+
+% ext2spice cthresh 0 rthresh 0
+
+% ext2spice
+```
+`cthresh 0 rthresh 0` is used to extract parasitic capacitances from the cell.<br>
+
+![2](https://user-images.githubusercontent.com/62461290/187435606-af09735d-64bf-4623-a4bf-e3bae9a2bd56.png)
+
+The spice netlist has to be edited to add the libraries we are using, The final spice netlist should look like the following:
+
+```
+* SPICE3 file created from sky130_inv.ext - technology: sky130A
+
+.option scale=0.01u
+.include ./libs/pshort.lib
+.include ./libs/nshort.lib
+
+
+M1001 Y A VGND VGND nshort_model.0 ad=1435 pd=152 as=1365 ps=148 w=35 l=23
+M1000 Y A VPWR VPWR pshort_model.0 ad=1443 pd=152 as=1517 ps=156 w=37 l=23
+VDD VPWR 0 3.3V
+VSS VGND 0 0V
+Va A VGND PULSE(0V 3.3V 0 0.1ns 0.1ns 2ns 4ns)
+C0 Y VPWR 0.08fF
+C1 A Y 0.02fF
+C2 A VPWR 0.08fF
+C3 Y VGND 0.18fF
+C4 VPWR VGND 0.74fF
+
+
+.tran 1n 20n
+.control
+run
+.endc
+.end
+```
+
+Open the terminal in the directory where ngspice is stored and type the following command, ngspice console will open:
+
+```
+$ ngspice sky130_inv.spice 
+```
+
+![3](https://user-images.githubusercontent.com/62461290/187436666-ddcd5d51-b413-4ab8-a6ae-ca06006819dc.png)<br>
+
+Now you can plot the graphs for the designed inverter model.
+
+```
+-> plot y vs time a
+```
+
+![4](https://user-images.githubusercontent.com/62461290/187437163-988dac40-0bd4-4ef6-abba-8528bad54659.png)<br>
+
+Four timing parameters are used to characterize the inverter standard cell:<br>
+
+1. Rise time: Time taken for the output to rise from 20% of max value to 80% of max value<br>
+        `Rise time = (2.23843 - 2.17935) = 59.08ps`
+2. Fall time- Time taken for the output to fall from 80% of max value to 20% of max value<br>
+        `Fall time = (4.09291 - 4.05004) = 42.87ps`
+3. Cell rise delay = time(50% output rise) - time(50% input fall)<br>
+        `Cell rise delay = (2.20636 - 2.15) = 56.36ps`  
+4. Cell fall delay  = time(50% output fall) - time(50% input rise)<br>
+        `Cell fall delay = (4.07479 - 4.05) = 24.79ps`
+        
+To get a grid and to ensure the ports are placed correctly we can use
+```
+% grid 0.46um 0.34um 0.23um 0.17um
+```
+
+![5](https://user-images.githubusercontent.com/62461290/187439583-b2226424-4db2-419f-8e6b-ff1e4d365adb.png)
+
+
+To save the file with a different name, use the folllowing command in tcl window
+```
+% save sky130_vsdinv.mag
+```
+
+Now open the sky130_vsdinv.mag using the magic command in terminal
+```
+$ magic -T sky130A.tech sky130_vsdinv.mag
+```
+In the tcl command type the following command to generate sky130_vsdinv.lef
+```
+$ lef write
+```
+A sky130_vsdinv.lef file will be created.
+
 
 # Layout
 
