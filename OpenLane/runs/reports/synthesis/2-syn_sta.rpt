@@ -1,0 +1,49 @@
+
+===========================================================================
+report_checks -unconstrained
+============================================================================
+Startpoint: _129_ (rising edge-triggered flip-flop clocked by clkin')
+Endpoint: clkout (output port clocked by clkin)
+Path Group: clkin
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.15    5.00    5.00   clock clkin' (rise edge)
+                          0.00    5.00   clock network delay (ideal)
+                  0.15    0.00    5.00 ^ _129_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                  0.05    0.39    5.39 v _129_/Q (sky130_fd_sc_hd__dfxtp_2)
+     6    0.02                           nc[0] (net)
+                  0.05    0.00    5.39 v _085_/A (sky130_vsdinv)
+                  0.04    0.06    5.45 ^ _085_/Y (sky130_vsdinv)
+     2    0.00                           _032_ (net)
+                  0.04    0.00    5.45 ^ _088_/A1_N (sky130_fd_sc_hd__a2bb2o_2)
+                  0.04    0.27    5.72 v _088_/X (sky130_fd_sc_hd__a2bb2o_2)
+     1    0.00                           _034_ (net)
+                  0.04    0.00    5.72 v _091_/A1 (sky130_fd_sc_hd__a21o_2)
+                  0.04    0.19    5.92 v _091_/X (sky130_fd_sc_hd__a21o_2)
+     1    0.00                           _037_ (net)
+                  0.04    0.00    5.92 v _099_/A2 (sky130_fd_sc_hd__a211oi_2)
+                  0.62    0.58    6.49 ^ _099_/Y (sky130_fd_sc_hd__a211oi_2)
+     1    0.03                           clkout (net)
+                  0.62    0.00    6.49 ^ clkout (out)
+                                  6.49   data arrival time
+
+                  0.15   10.00   10.00   clock clkin (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                         -2.00    7.75   output external delay
+                                  7.75   data required time
+-----------------------------------------------------------------------------
+                                  7.75   data required time
+                                 -6.49   data arrival time
+-----------------------------------------------------------------------------
+                                  1.26   slack (MET)
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+No paths found.

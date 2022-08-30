@@ -1,0 +1,25 @@
+
+16. Printing statistics.
+
+=== iiitb_freqdiv ===
+
+   Number of wires:                123
+   Number of wire bits:            144
+   Number of public wires:           6
+   Number of public wire bits:      15
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                130
+     $_ANDNOT_                      44
+     $_AND_                          3
+     $_MUX_                          9
+     $_NAND_                         4
+     $_NOR_                          6
+     $_NOT_                         11
+     $_ORNOT_                        3
+     $_OR_                          13
+     $_XNOR_                         2
+     $_XOR_                         27
+     sky130_fd_sc_hd__dfxtp_2        8
+
