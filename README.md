@@ -49,6 +49,7 @@ This is a frequency divider model which provide frequency division upto 16 of th
  * [Error 3 : Files name mismatch error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-3)<br>
  * [Error 4 : No Macro Error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-4)<br>
  * [Error 5 : sky130_vsdinv not reflecting in stat](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-5)<br>
+ * [Error 6: List index out of range](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-6)<br>
 
 
  
@@ -560,6 +561,15 @@ If you are getting the below error please add `"TEST_EXTERNAL_GLOB": "dir::../ii
 If the sky130_vsdinv files are not getting reflected in stat even when the merging was successful and the cell is seen in the merged.nom.lef file. Please use the libraries uploaded in this github page to get the sky130_vsdinv to reflecct in your stat.<br>
 
 `"SYNTH_DRIVING_CELL":"sky130_vsdinv"` please add this to the config.json file while including these libraries. <br>
+
+## Error 6
+
+If you are getting the below error, please check the file name and macro name of `sky130_vsdinv` shoud be same as the once mentioned in  `sky130_fd_sc_hd__fast.lib`, `sky130_fd_sc_hd__slow.lib`, `sky130_fd_sc_hd__typical.lib`<br>
+<br>
+
+![WhatsApp Image 2022-08-30 at 2 56 56 PM](https://user-images.githubusercontent.com/62461290/187409708-80412472-5530-44c0-bbae-533a4545fbae.jpeg)
+
+
 
 
 # Reference
