@@ -1,0 +1,75 @@
+  violation type: N_well_spacing_lt_1dot27um_nwelldot2a
+    srcs: N/A N/A
+    bbox = ( 42.590, 46.430 ) - ( 42.860, 47.655 ) on Layer nwell
+  violation type: N_well_spacing_lt_1dot27um_nwelldot2a
+    srcs: N/A N/A
+    bbox = ( 46.270, 40.990 ) - ( 46.540, 42.215 ) on Layer nwell
+  violation type: N_well_spacing_lt_1dot27um_nwelldot2a
+    srcs: N/A N/A
+    bbox = ( 55.930, 40.990 ) - ( 56.200, 42.215 ) on Layer nwell
+  violation type: N_well_spacing_lt_1dot27um_nwelldot2a
+    srcs: N/A N/A
+    bbox = ( 46.730, 30.110 ) - ( 47.000, 31.335 ) on Layer nwell
+  violation type: N_well_spacing_lt_1dot27um_nwelldot2a
+    srcs: N/A N/A
+    bbox = ( 51.330, 30.110 ) - ( 51.600, 31.335 ) on Layer nwell
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 41.545, 47.345 ) - ( 41.715, 47.515 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 41.545, 47.345 ) - ( 41.715, 47.515 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 42.465, 47.345 ) - ( 42.635, 47.515 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 42.465, 47.345 ) - ( 42.635, 47.515 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 45.225, 41.905 ) - ( 45.395, 42.075 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 45.225, 41.905 ) - ( 45.395, 42.075 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 46.145, 41.905 ) - ( 46.315, 42.075 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 46.145, 41.905 ) - ( 46.315, 42.075 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 54.885, 41.905 ) - ( 55.055, 42.075 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 54.885, 41.905 ) - ( 55.055, 42.075 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 55.805, 41.905 ) - ( 55.975, 42.075 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 55.805, 41.905 ) - ( 55.975, 42.075 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 45.685, 31.025 ) - ( 45.855, 31.195 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 45.685, 31.025 ) - ( 45.855, 31.195 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 46.605, 31.025 ) - ( 46.775, 31.195 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 46.605, 31.025 ) - ( 46.775, 31.195 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 50.285, 31.025 ) - ( 50.455, 31.195 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 50.285, 31.025 ) - ( 50.455, 31.195 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 51.205, 31.025 ) - ( 51.375, 31.195 ) on Layer li
+  violation type: Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6
+    srcs: N/A N/A
+    bbox = ( 51.205, 31.025 ) - ( 51.375, 31.195 ) on Layer li

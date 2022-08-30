@@ -1,0 +1,293 @@
+<?xml version="1.0" ?>
+<report-database>
+    <categories>
+        <category>
+            <name>N_well_spacing_lt_1dot27um_nwelldot2a</name>
+        </category>
+        <category>
+            <name>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</name>
+        </category>
+    </categories>
+    <cells>
+        <cell>
+            <name>iiitb_freqdiv</name>
+        </cell>
+    </cells>
+    <items>
+        <item>
+            <category>N_well_spacing_lt_1dot27um_nwelldot2a</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (42.590,46.430;42.860,47.655)</value>
+                <value>text: 'On layer nwell'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>N_well_spacing_lt_1dot27um_nwelldot2a</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (46.270,40.990;46.540,42.215)</value>
+                <value>text: 'On layer nwell'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>N_well_spacing_lt_1dot27um_nwelldot2a</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (55.930,40.990;56.200,42.215)</value>
+                <value>text: 'On layer nwell'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>N_well_spacing_lt_1dot27um_nwelldot2a</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (46.730,30.110;47.000,31.335)</value>
+                <value>text: 'On layer nwell'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>N_well_spacing_lt_1dot27um_nwelldot2a</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (51.330,30.110;51.600,31.335)</value>
+                <value>text: 'On layer nwell'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (41.545,47.345;41.715,47.515)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (41.545,47.345;41.715,47.515)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (42.465,47.345;42.635,47.515)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (42.465,47.345;42.635,47.515)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (45.225,41.905;45.395,42.075)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (45.225,41.905;45.395,42.075)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (46.145,41.905;46.315,42.075)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (46.145,41.905;46.315,42.075)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (54.885,41.905;55.055,42.075)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (54.885,41.905;55.055,42.075)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (55.805,41.905;55.975,42.075)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (55.805,41.905;55.975,42.075)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (45.685,31.025;45.855,31.195)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (45.685,31.025;45.855,31.195)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (46.605,31.025;46.775,31.195)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (46.605,31.025;46.775,31.195)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (50.285,31.025;50.455,31.195)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (50.285,31.025;50.455,31.195)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (51.205,31.025;51.375,31.195)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Local_interconnect_minimum_area_lt_0dot0561umpow2_lidot6</category>
+            <cell>iiitb_freqdiv</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (51.205,31.025;51.375,31.195)</value>
+                <value>text: 'On layer li'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+    </items>
+</report-database>
