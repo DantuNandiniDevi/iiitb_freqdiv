@@ -51,6 +51,7 @@ This is a frequency divider model which provide frequency division upto 16 of th
  * [Error 5 : sky130_vsdinv not reflecting in stat](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-5)<br>
  * [Error 6: List index out of range](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-6)<br>
  * [Error 7: Can't read sky130_vsdinv error in tcl window](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-7)<br>
+ * [Error 8: PL_TARGET DENSITY error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-8)<br>
  
 
 
@@ -539,7 +540,7 @@ If the below error occurs while doing `make mount` replace it with `sudo make mo
 If you face the below error play around with the values of `PL_TARGET_DENSITY`, `FP_CORE_UTIL` and `CLOCK_PERIOD` until it works for your design, these values are very custom for each and every design. <br>
 <br>
 
-![error](https://user-images.githubusercontent.com/62461290/187060613-a21b3443-92fd-4e1e-8ab5-d17d5b7466d4.png)<br>
+![image](https://user-images.githubusercontent.com/62461290/187419005-df228345-7811-411d-8f2b-dd16107def0a.png)
 
 ## Error 3
 
@@ -582,6 +583,10 @@ $ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read .
 
 ![error7](https://user-images.githubusercontent.com/62461290/187417649-cbafa63e-a68b-4497-9f59-eee3e6963b2c.png)
 
+## Error 8
+If you get the below error, change the `PL_TARGET_DENSITY` to the mentioned value.<br>
+<br>
+![error](https://user-images.githubusercontent.com/62461290/187060613-a21b3443-92fd-4e1e-8ab5-d17d5b7466d4.png)<br>
 
 
 # Reference
