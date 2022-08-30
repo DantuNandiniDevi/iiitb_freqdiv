@@ -1,0 +1,24 @@
+{
+    "DESIGN_NAME": "iiitb_freqdiv",
+    "VERILOG_FILES": "dir::src/iiitb_freqdiv.v",
+    "CLOCK_PORT": "clkin",
+    "CLOCK_NET": "clkin",
+    "GLB_RESIZER_TIMING_OPTIMIZATIONS": true,
+    "CLOCK_PERIOD": 10,
+    "PL_TARGET_DENSITY": 0.7,
+    "FP_SIZING" : "relative",
+    "pdk::sky130*": {
+        "FP_CORE_UTIL": 30,
+        "scl::sky130_fd_sc_hd": {
+            "FP_CORE_UTIL": 20
+        }
+    },
+    
+    "LIB_SYNTH": "dir::src/sky130_fd_sc_hd__typical.lib",
+    "LIB_FASTEST": "dir::src/sky130_fd_sc_hd__fast.lib",
+    "LIB_SLOWEST": "dir::src/sky130_fd_sc_hd__slow.lib",
+    "LIB_TYPICAL": "dir::src/sky130_fd_sc_hd__typical.lib",  
+    "TEST_EXTERNAL_GLOB": "dir::../iiitb_freqdiv/src/*"
+
+
+}
