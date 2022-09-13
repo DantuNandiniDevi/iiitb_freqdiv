@@ -21,6 +21,7 @@ This is a frequency divider model which provide frequency division upto 16 of th
     - [installing magic](https://github.com/DantuNandiniDevi/iiitb_freqdiv#installing-magic)<br>
  * [klayout installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#klayout-installation)<br>
  * [ngspice installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv#ngspice-installation)<br>
+ * [Tapeout : Caravel Flow Installation](https://github.com/DantuNandiniDevi/iiitb_freqdiv/blob/main/README.md#tapeout--caravel-flow-installation)
 
 [PreSynthesis](https://github.com/DantuNandiniDevi/iiitb_freqdiv#presynthesis)<br>
  <br>
