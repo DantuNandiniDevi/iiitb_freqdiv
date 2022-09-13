@@ -48,7 +48,7 @@ This is a frequency divider model which provide frequency division upto 16 of th
  [Note](https://github.com/DantuNandiniDevi/iiitb_freqdiv#note)<br>
  <br>
 
-[Tapeout : Caravel Flow](https://github.com/DantuNandiniDevi/iiitb_freqdiv/edit/main/README.md#tapeout--caravel-flow)<br>
+[Tapeout : Caravel Flow](https://github.com/DantuNandiniDevi/iiitb_freqdiv#tapeout--caravel-flow)<br>
 <br>
 
 [Errors and Solutions](https://github.com/DantuNandiniDevi/iiitb_freqdiv#errors-and-solutions)<br>
