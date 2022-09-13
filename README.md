@@ -232,7 +232,7 @@ $ sudo apt-get install klayout
 $ sudo apt-get install ngspice
 ```
 
-# Tapeout : Caravel flow installation
+## Tapeout : Caravel flow installation
 
 To start the project you first need to create a new repository based on the `caravel_user_project <https://github.com/efabless/caravel_user_project/>`_ template and make sure your repo is public and includes a README.
 
