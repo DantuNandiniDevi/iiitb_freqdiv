@@ -47,7 +47,11 @@ This is a frequency divider model which provide frequency division upto 16 of th
  <br>
  [Note](https://github.com/DantuNandiniDevi/iiitb_freqdiv#note)<br>
  <br>
- [Errors and Solutions](https://github.com/DantuNandiniDevi/iiitb_freqdiv#errors-and-solutions)<br>
+
+[Tapeout : Caravel Flow](https://github.com/DantuNandiniDevi/iiitb_freqdiv/edit/main/README.md#tapeout--caravel-flow)<br>
+<br>
+
+[Errors and Solutions](https://github.com/DantuNandiniDevi/iiitb_freqdiv#errors-and-solutions)<br>
  * [Error 1 : make mount permission denied](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-1)<br>
  * [Error 2 : placement failed error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-2)<br>
  * [Error 3 : Files name mismatch error](https://github.com/DantuNandiniDevi/iiitb_freqdiv#error-3)<br>
@@ -669,6 +673,68 @@ $ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech iiitb_
 ![32](https://user-images.githubusercontent.com/62461290/186206196-526af125-b092-4bfc-9025-33dad27a3e6e.png)<br>
 
 # Tapeout : Caravel Flow
+
+Installation screenshot<br>
+
+![install](https://user-images.githubusercontent.com/62461290/189863557-51c9a9f6-9a74-4724-a18d-e66f681fe46e.png)<br>
+<br>
+
+
+We have to edit the `user_pro_example.v` according to our code and edit/add a suitable test bench to verify the design.<br>
+
+```
+$ make verify-user_proj_example-rtl
+```
+
+![rtltbpassed](https://user-images.githubusercontent.com/62461290/189860847-d078fda3-2cd0-4321-9aa8-9ce64dc6bfb5.png)<br>
+
+![rtl_simulation_passed](https://user-images.githubusercontent.com/62461290/189860729-2fbee431-7c91-4daf-8c62-b001fe898098.png)<br>
+
+```
+$ make user_proj_example
+```
+![make_usr_proj](https://user-images.githubusercontent.com/62461290/189861056-547d6b5d-b3a2-465a-bf58-d85cce7797b6.png)<br>
+
+![flow_comp](https://user-images.githubusercontent.com/62461290/189862072-0b5f53b4-4b54-4f14-ab18-84d7af667a26.png)<br>
+
+Layout view of user_proj_example<br>
+
+![image](https://user-images.githubusercontent.com/62461290/189861367-9e3e518f-400c-4afc-9a99-d38f2cb419d9.png)<br>
+
+![image](https://user-images.githubusercontent.com/62461290/189861579-e83efe47-44be-4eb6-a2e2-5d1020ccf671.png)<br>
+
+```
+$ make verify-user_proj_example-gl
+```
+
+![gl_sim](https://user-images.githubusercontent.com/62461290/189861837-3370d52b-cb46-4852-b4d8-66e02468897a.png)
+
+```
+$ make user_project_wrapper
+```
+![make_wrapper](https://user-images.githubusercontent.com/62461290/189862235-e111ed9a-2aac-4193-a51c-886dd33a7e10.png)<br>
+
+![flow_complete](https://user-images.githubusercontent.com/62461290/189862258-51be1548-e2f9-40b4-b631-f1f9eb9bff6e.png)<br>
+
+Layout view of user_project_wrapper<br>
+
+![image](https://user-images.githubusercontent.com/62461290/189862491-3945209f-d1d3-4a34-973b-5c0896f7f79d.png)<br>
+
+![image](https://user-images.githubusercontent.com/62461290/189862669-03079397-9d46-451f-a939-5941e174e1b9.png)<br>
+
+```
+$ make precheck
+```
+
+![make_precheck](https://user-images.githubusercontent.com/62461290/189863143-e55aba4c-c160-4d16-ad0b-73d833438e7b.png)<br>
+
+```
+$ make run-precheck
+```
+
+![runcheck](https://user-images.githubusercontent.com/62461290/189863250-196c2d09-0058-410d-9f27-5e800d01a818.png)
+
+![precheck_pass](https://user-images.githubusercontent.com/62461290/189863384-6dc85973-2722-4eef-9b45-00134598edad.png)
 
 
 
