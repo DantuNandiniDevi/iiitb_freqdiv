@@ -588,7 +588,7 @@ All the cells are placed in the left corner of the floorplan<br>
 ### Placement Reports
 Navigate to results->placement and type the Magic command in terminal to open the placement view <br>
 ```
-$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.max.lef def read iiitb_freqdiv.def &
+$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_freqdiv.def &
 ```
 ![19](https://user-images.githubusercontent.com/62461290/187059871-7f4746b1-87ec-40fb-827b-e76df64e3e3d.png)<br>
 <br>
@@ -671,6 +671,46 @@ $ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech iiitb_
 ![30](https://user-images.githubusercontent.com/62461290/186206184-3f146947-84d9-4178-9dd2-c54330067168.png)<br>
 ![31](https://user-images.githubusercontent.com/62461290/186206194-4ea81f2f-ab7f-4d34-840d-7aabff547774.png)<br>
 ![32](https://user-images.githubusercontent.com/62461290/186206196-526af125-b092-4bfc-9025-33dad27a3e6e.png)<br>
+
+# Results post-layout
+
+### 1. Post Layout synthesis gate count
+
+![image](https://user-images.githubusercontent.com/62461290/192306542-c2973268-403d-4697-8bb9-36863e261c97.png) <br>
+
+<b><I> Gate Count = 71 </b></I> <br>
+
+### 2. Area (box command)
+
+![image](https://user-images.githubusercontent.com/62461290/192308634-40e24781-4451-4e17-bead-6fe36b62dc8e.png) <br>
+
+<b><I> Area = 5517.051 um2</b></I> <br>
+
+
+### 3. Performance
+
+![perf_1](https://user-images.githubusercontent.com/62461290/192305126-fe18d0d2-62c0-4e52-ac98-cc8d9aaff66b.png) <br>
+
+![perf_2](https://user-images.githubusercontent.com/62461290/192305136-139042ad-7838-4838-84d9-c37fc64db14b.png)<br>
+
+<b><I> Performance = 1/(clock period - slack) = 1/(10 - 1.81)ps = 122.1Ghz </b></I><br>
+
+### 4. Flop/standard cell ratio
+
+![image](https://user-images.githubusercontent.com/62461290/192309751-ca917e21-6cdd-4791-912c-af3c8f2481d1.png) <br>
+
+
+<b><I>Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 8/71 = 0.1125 </b></I><br>
+
+### 5. Power (internal, switching, leakage and total)
+
+![image](https://user-images.githubusercontent.com/62461290/192310233-9804d9cf-25a7-40b5-a9d3-ef8bbd005532.png) <br>
+
+<b><I> Internal Power = 97.8 uW (74.4%) </b></I><br>
+<b><I> Switching Power = 33.6 uW (25.6%) </b></I><br>
+<b><I> Leakage Power = 0.485 nW (0.00%) </b></I><br>
+<b><I> Total Power = 131 uW (100%) </b></I><br>
+
 
 # Tapeout : Caravel Flow
 
