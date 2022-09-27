@@ -48,7 +48,13 @@ This is a frequency divider model which provide frequency division upto 16 of th
  [Note](https://github.com/DantuNandiniDevi/iiitb_freqdiv#note)<br>
  <br>
 
-[Results]()
+[Results](https://github.com/DantuNandiniDevi/iiitb_freqdiv/blob/main/README.md#results-post-layout) <br>
+* [1. Post layout synthesis gate count](https://github.com/DantuNandiniDevi/iiitb_freqdiv/blob/main/README.md#1-post-layout-synthesis-gate-count)<br>
+* [2. Area (box command)](https://github.com/DantuNandiniDevi/iiitb_freqdiv/blob/main/README.md#2-area-box-command)<br>
+* [3. Performance](https://github.com/DantuNandiniDevi/iiitb_freqdiv/blob/main/README.md#3-performance)<br>
+* [4. Flop/Standard cell ratio](https://github.com/DantuNandiniDevi/iiitb_freqdiv/blob/main/README.md#4-flopstandard-cell-ratio)<br>
+* [5. Power (internal,switching,leakage and total)](https://github.com/DantuNandiniDevi/iiitb_freqdiv/blob/main/README.md#5-power-internal-switching-leakage-and-total)<br>
+
 
 [Tapeout : Caravel Flow](https://github.com/DantuNandiniDevi/iiitb_freqdiv#tapeout--caravel-flow)<br>
 <br>
@@ -691,18 +697,25 @@ $ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech iiitb_
 
 ### 3. Performance
 
-'''
-$ sta
+```
+$ sta <br>
 
-OpenSTA> read_liberty -max /home/nandu/OpenLane/designs/iiitb_freqdiv/src/sky130_fd_sc_hd__fast.lib
-OpenSTA> read_liberty -min /home/nandu/OpenLane/designs/iiitb_freqdiv/src/sky130_fd_sc_hd__slow.lib
-OpenSTA> read_verilog /home/nandu/OpenLane/designs/iiitb_freqdiv/runs/RUN_2022.09.27_14.17.25/results/routing/iiitb_freqdiv.resized.v
-OpenSTA> link_design iiitb_freqdiv
-OpenSTA> read_sdc /home/nandu/OpenLane/designs/iiitb_freqdiv/runs/RUN_2022.09.27_14.17.25/results/cts/iiitb_freqdiv.sdc
-OpenSTA> read_spef /home/nandu/OpenLane/designs/iiitb_freqdiv/runs/RUN_2022.09.27_14.17.25/results/routing/iiitb_freqdiv.nom.spef
-OpenSTA> set_propagated_clock [all_clocks]
-OpenSTA> report_checks
-'''
+OpenSTA> read_liberty -max /home/nandu/OpenLane/designs/iiitb_freqdiv/src/sky130_fd_sc_hd__fast.lib <br>
+
+OpenSTA> read_liberty -min /home/nandu/OpenLane/designs/iiitb_freqdiv/src/sky130_fd_sc_hd__slow.lib <br>
+
+OpenSTA> read_verilog /home/nandu/OpenLane/designs/iiitb_freqdiv/runs/RUN_2022.09.27_14.17.25/results/routing/iiitb_freqdiv.resized.v <br>
+
+OpenSTA> link_design iiitb_freqdiv <br>
+
+OpenSTA> read_sdc /home/nandu/OpenLane/designs/iiitb_freqdiv/runs/RUN_2022.09.27_14.17.25/results/cts/iiitb_freqdiv.sdc <br>
+
+OpenSTA> read_spef /home/nandu/OpenLane/designs/iiitb_freqdiv/runs/RUN_2022.09.27_14.17.25/results/routing/iiitb_freqdiv.nom.spef <br>
+
+OpenSTA> set_propagated_clock [all_clocks] <br>
+
+OpenSTA> report_checks <br>
+```
 
 ![image](https://user-images.githubusercontent.com/62461290/192555217-b263a4e2-cad6-44e3-8682-bb0b70840aa5.png)<br>
 
