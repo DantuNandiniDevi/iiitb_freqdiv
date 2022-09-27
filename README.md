@@ -689,9 +689,9 @@ $ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech iiitb_
 
 ### 3. Performance
 
-![perf_1](https://user-images.githubusercontent.com/62461290/192305126-fe18d0d2-62c0-4e52-ac98-cc8d9aaff66b.png) <br>
+![image](https://user-images.githubusercontent.com/62461290/192543510-9535080a-63a2-4df7-acd3-2abf0ec053bf.png)<br>
 
-![perf_2](https://user-images.githubusercontent.com/62461290/192305136-139042ad-7838-4838-84d9-c37fc64db14b.png)<br>
+![image](https://user-images.githubusercontent.com/62461290/192541472-221216c4-886a-4eb0-b8c7-04bec405ff55.png)<br>
 
 <b><I> Performance = 1/(clock period - slack) = 1/(10 - 1.81)ps = 122.1Ghz </b></I><br>
 
