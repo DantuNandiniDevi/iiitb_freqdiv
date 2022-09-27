@@ -48,6 +48,8 @@ This is a frequency divider model which provide frequency division upto 16 of th
  [Note](https://github.com/DantuNandiniDevi/iiitb_freqdiv#note)<br>
  <br>
 
+[Results]()
+
 [Tapeout : Caravel Flow](https://github.com/DantuNandiniDevi/iiitb_freqdiv#tapeout--caravel-flow)<br>
 <br>
 
@@ -676,40 +678,53 @@ $ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech iiitb_
 
 ### 1. Post Layout synthesis gate count
 
-![image](https://user-images.githubusercontent.com/62461290/192306542-c2973268-403d-4697-8bb9-36863e261c97.png) <br>
+![image](https://user-images.githubusercontent.com/62461290/192561109-5060bb00-2d5f-41c1-a6b1-f42803c02af1.png) <br>
 
 <b><I> Gate Count = 71 </b></I> <br>
 
 ### 2. Area (box command)
 
-![image](https://user-images.githubusercontent.com/62461290/192308634-40e24781-4451-4e17-bead-6fe36b62dc8e.png) <br>
+![image](https://user-images.githubusercontent.com/62461290/192560025-fbbdb1ea-5964-48fe-81a5-bbf15ee119af.png) <br>
 
-<b><I> Area = 5517.051 um2</b></I> <br>
+<b><I> Area = 5397.065 um2</b></I> <br>
 
 
 ### 3. Performance
 
-![image](https://user-images.githubusercontent.com/62461290/192543510-9535080a-63a2-4df7-acd3-2abf0ec053bf.png)<br>
+'''
+$ sta
 
-![image](https://user-images.githubusercontent.com/62461290/192541472-221216c4-886a-4eb0-b8c7-04bec405ff55.png)<br>
+OpenSTA> read_liberty -max /home/nandu/OpenLane/designs/iiitb_freqdiv/src/sky130_fd_sc_hd__fast.lib
+OpenSTA> read_liberty -min /home/nandu/OpenLane/designs/iiitb_freqdiv/src/sky130_fd_sc_hd__slow.lib
+OpenSTA> read_verilog /home/nandu/OpenLane/designs/iiitb_freqdiv/runs/RUN_2022.09.27_14.17.25/results/routing/iiitb_freqdiv.resized.v
+OpenSTA> link_design iiitb_freqdiv
+OpenSTA> read_sdc /home/nandu/OpenLane/designs/iiitb_freqdiv/runs/RUN_2022.09.27_14.17.25/results/cts/iiitb_freqdiv.sdc
+OpenSTA> read_spef /home/nandu/OpenLane/designs/iiitb_freqdiv/runs/RUN_2022.09.27_14.17.25/results/routing/iiitb_freqdiv.nom.spef
+OpenSTA> set_propagated_clock [all_clocks]
+OpenSTA> report_checks
+'''
 
-<b><I> Performance = 1/(clock period - slack) = 1/(10 - 1.81)ps = 122.1Ghz </b></I><br>
+![image](https://user-images.githubusercontent.com/62461290/192555217-b263a4e2-cad6-44e3-8682-bb0b70840aa5.png)<br>
+
+![image](https://user-images.githubusercontent.com/62461290/192554957-5c3adff3-850e-4f62-b842-7279bf1ebd6d.png)<br>
+
+<b><I> Performance = 1/(clock period - slack) = 1/(10 - 1.70)ns = 120.482Mhz </b></I><br>
 
 ### 4. Flop/standard cell ratio
 
-![image](https://user-images.githubusercontent.com/62461290/192309751-ca917e21-6cdd-4791-912c-af3c8f2481d1.png) <br>
+![image](https://user-images.githubusercontent.com/62461290/192561408-44f38899-38d3-4b34-89f5-1b25cb59a143.png) <br>
 
 
 <b><I>Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 8/71 = 0.1125 </b></I><br>
 
 ### 5. Power (internal, switching, leakage and total)
 
-![image](https://user-images.githubusercontent.com/62461290/192310233-9804d9cf-25a7-40b5-a9d3-ef8bbd005532.png) <br>
+![image](https://user-images.githubusercontent.com/62461290/192557539-51cbc494-67f6-4a8f-9b39-cd5da92613b5.png) <br>
 
-<b><I> Internal Power = 97.8 uW (74.4%) </b></I><br>
-<b><I> Switching Power = 33.6 uW (25.6%) </b></I><br>
-<b><I> Leakage Power = 0.485 nW (0.00%) </b></I><br>
-<b><I> Total Power = 131 uW (100%) </b></I><br>
+<b><I> Internal Power = 97.9 uW (74.4%) </b></I><br>
+<b><I> Switching Power = 33.7 uW (25.6%) </b></I><br>
+<b><I> Leakage Power = 0.459 nW (0.00%) </b></I><br>
+<b><I> Total Power = 132 uW (100%) </b></I><br>
 
 
 # Tapeout : Caravel Flow
