@@ -73,9 +73,9 @@ This is a frequency divider model which provide frequency division upto 16 of th
 
  
  [References](https://github.com/DantuNandiniDevi/iiitb_freqdiv#reference)<br>
- [Authors](https://github.com/DantuNandiniDevi/iiitb_freqdiv#reference)<br>
- [References](https://github.com/DantuNandiniDevi/iiitb_freqdiv#reference)<br>
- [References](https://github.com/DantuNandiniDevi/iiitb_freqdiv#reference)<br>
+ [Author](https://github.com/DantuNandiniDevi/iiitb_freqdiv#author)<br>
+ [Contributors](https://github.com/DantuNandiniDevi/iiitb_freqdiv#contributors)<br>
+ [Acknowledgement](https://github.com/DantuNandiniDevi/iiitb_freqdiv#acknowledgement)<br>
  <br>
  
 # Description
