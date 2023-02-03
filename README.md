@@ -883,13 +883,21 @@ If you get the below error, change the `PL_TARGET_DENSITY` to the mentioned valu
 - Dantu Nandini Devi </br>
 - Vasanthi D R </br>
 - Kunal Ghosh </br>
-- Nanditha Rao </br>
-- Madhav Rao </br>
 
 # Acknowledgement
 - Kunal Ghosh, VSD Corp. Pvt. Ltd. </br>
 - Nanditha Rao, Professor, IIITB </br>
 - Madhav Rao, Professor, IIITB </br>
+- Efabless Corporation
+- Skywater Foundry
+- Open Road
+- Google
+
+# References 
+- https://github.com/The-OpenROAD-Project/OpenLane
+- https://github.com/YosysHQ/yosys
+- https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
+- https://github.com/kunalg123/vsdflow
 
 # Contact Information
 - Dantu Nandini Devi, MS by Research Student, IIITB, nandini.dantu@gmail.com </br>
