@@ -73,6 +73,9 @@ This is a frequency divider model which provide frequency division upto 16 of th
 
  
  [References](https://github.com/DantuNandiniDevi/iiitb_freqdiv#reference)<br>
+ [Authors](https://github.com/DantuNandiniDevi/iiitb_freqdiv#reference)<br>
+ [References](https://github.com/DantuNandiniDevi/iiitb_freqdiv#reference)<br>
+ [References](https://github.com/DantuNandiniDevi/iiitb_freqdiv#reference)<br>
  <br>
  
 # Description
@@ -876,6 +879,14 @@ If you get the below error, change the `PL_TARGET_DENSITY` to the mentioned valu
 
 - https://eng.libretexts.org/Bookshelves/ElectricalEngineering/Electronics/Microwave and RF Design IV%3A Modules (Steer)/06%3A Mixer and Source Modules/6.08%3A Frequency Divider,some content and fig.1. was taken from here..
 
+- https://github.com/The-OpenROAD-Project/OpenLane
+
+- https://github.com/YosysHQ/yosys
+
+- https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
+
+- https://github.com/kunalg123/vsdflow
+
 # Author
 - Dantu Nandini Devi
 
@@ -892,12 +903,6 @@ If you get the below error, change the `PL_TARGET_DENSITY` to the mentioned valu
 - Skywater Foundry
 - Open Road
 - Google
-
-# References 
-- https://github.com/The-OpenROAD-Project/OpenLane
-- https://github.com/YosysHQ/yosys
-- https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
-- https://github.com/kunalg123/vsdflow
 
 # Contact Information
 - Dantu Nandini Devi, MS by Research Student, IIITB, nandini.dantu@gmail.com </br>
