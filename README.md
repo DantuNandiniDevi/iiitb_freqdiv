@@ -888,14 +888,18 @@ If you get the below error, change the `PL_TARGET_DENSITY` to the mentioned valu
 - https://github.com/kunalg123/vsdflow
 
 # Author
+
 - Dantu Nandini Devi
 
 # Contributors
+
 - Dantu Nandini Devi </br>
 - Vasanthi D R </br>
 - Kunal Ghosh </br>
 
 # Acknowledgement
+
+- Vasanthi D R, PhD Student, IIITB </br>
 - Kunal Ghosh, VSD Corp. Pvt. Ltd. </br>
 - Nanditha Rao, Professor, IIITB </br>
 - Madhav Rao, Professor, IIITB </br>
@@ -905,6 +909,7 @@ If you get the below error, change the `PL_TARGET_DENSITY` to the mentioned valu
 - Google
 
 # Contact Information
+
 - Dantu Nandini Devi, MS by Research Student, IIITB, nandini.dantu@gmail.com </br>
 - Vasanthi D R, PhD Student, IIITB, vasanthi.dr@iiitb.ac.in </br>
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com </br>
